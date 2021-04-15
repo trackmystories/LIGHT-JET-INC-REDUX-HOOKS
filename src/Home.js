@@ -3,7 +3,6 @@ import {StyleSheet, Text, View, ActivityIndicator} from 'react-native';
 import {SubmitButton, CounterComponent} from './components';
 import {useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
-import {totalComponents} from './actions';
 
 const w = 'total wing count:';
 const e = 'total empennage count:';
@@ -35,7 +34,12 @@ export default function Home(value) {
     axios
       .get(url)
       .then(res => res.data)
-      .then(data => dispatch(totalComponents(data)))
+      .then(data =>
+        dispatch({
+          type: 'TOTAL_COMPONENTS',
+          data,
+        }),
+      )
       .catch(error => alert(error.message))
       .finally(() => setIsFetching(false));
   };

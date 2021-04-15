@@ -1,11 +1,10 @@
 import {combineReducers} from 'redux';
-import {TOTAL_COMPONENTS} from './actions';
 
 let dataState = {data: []};
 
 const total_components = (state = dataState, action) => {
   switch (action.type) {
-    case TOTAL_COMPONENTS:
+    case 'TOTAL_COMPONENTS':
       return {...state, data: action.data};
     default:
       return state;
