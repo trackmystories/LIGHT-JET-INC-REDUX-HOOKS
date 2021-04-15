@@ -4,7 +4,7 @@ Light Jet Inc Supply chain counter demonstrates counting and submiting the total
 
 To insure productivity that counter can not go below 30 items for each component this is when procurments knows when to restock.
 
-This Example uses redux with axios GET and PUT request to a remote firebase URL.
+This Example uses react-native, flow for type checking and redux with axios GET and PUT request to a remote firebase URL.
 
 Aircraft components:
 
@@ -34,7 +34,7 @@ pod install
 npx react-native start
 ```
 
-<img src="./assets/image.png" width="350" alt="image.png">
+<img src="./assets/image.png" width="350" alt="./assets/image.png">
 
 1. **Each counter starts out with various counts and consists of a button to increase or decrease the amount, a text showcasing the current amount and a button to decrease the amount.**
 
@@ -43,6 +43,3 @@ npx react-native start
 3. **The app then loads the updated state back onto the view of the app.**
 
 4. **The count stops at 0 and cannot go into negative figures**
-
-# LIGHT-JET-INC-REDUX-HOOKS
-# LIGHT-JET-INC-REDUX-HOOKS
