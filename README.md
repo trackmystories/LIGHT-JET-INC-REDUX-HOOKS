@@ -1,17 +1,15 @@
 # PLANE MANUFACTURER HANGER
 
-Light Jet Inc Supply chain counter demonstrates counting and submiting the total number for each of the 5 Main Components of it's light body Aircraft manufacturing line in the hanger so that the procurement department knows when to re-stock.
+Light Jet Inc Supply chain counter demonstrates counting and submitting the total number for each of the 5 Main Components of it's light body Aircraft at the end of the manufacturing line so that the procurement department knows when to re-stock.
 
-To insure productivity that counter cannot go below 30 items for each component this is when procurements knows when to restock.
-
+To insure productivity the counter cannot go below 30 items for each component, this is when procurement knows when to restock its #aircraft parts.
 This Example uses react-native, flow for type checking and redux with axios GET and PUT request to a remote firebase URL.
 
 Aircraft components:
-
-• Fuselage
-• Wings
-• Empennage
-• Power Plant
+• Fuselage 
+• Wings 
+• Empennage 
+• Power Plant 
 • Landing Gear
 
 ##### Setup node modules
