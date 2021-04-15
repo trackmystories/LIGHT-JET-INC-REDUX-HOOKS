@@ -38,7 +38,8 @@ npx react-native start
 
 1. **Each counter starts out with various counts and consists of a button to increase or decrease the amount, a text showcasing the current amount and a button to decrease the amount.**
 
-2. **When the user submits the app sends a PUT request with the state of the counters to the endpoint(procurement department) and saves it to a firebase realtime database**
+2. **When the user pressed add or minus the changes take place in real time on the firebase console**
 
-3. **The app then loads the updated state back onto the view of the app.**
+3. **When the user submits the app sends a PUT request with the state of the counters preserving it inside of the firebase realtime database**
 
+4. **The app then loads the updated state back onto the view of the app.**
