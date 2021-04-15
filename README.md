@@ -2,7 +2,7 @@
 
 Light Jet Inc Supply chain counter demonstrates counting and submiting the total number for each of the 5 Main Components of it's light body Aircraft manufacturing line in the hanger so that the procurement department knows when to re-stock.
 
-To insure productivity that counter can not go below 30 items for each component this is when procurments knows when to restock.
+To insure productivity that counter cannot go below 30 items for each component this is when procurments knows when to restock.
 
 This Example uses react-native, flow for type checking and redux with axios GET and PUT request to a remote firebase URL.
 
@@ -42,4 +42,3 @@ npx react-native start
 
 3. **The app then loads the updated state back onto the view of the app.**
 
-4. **The count stops at 0 and cannot go into negative figures**
