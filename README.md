@@ -42,4 +42,4 @@ npx react-native start
 
 4. **The app then loads the updated state back onto the view of the app.**
 
-5. **Once the count reaches 30 the count is disabled and no integer is shown indicating that new components must be ordered**
+5. **Once the count reaches 30 the count is disabled and no integer is shown.**
