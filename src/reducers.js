@@ -11,7 +11,7 @@ const total_components = (state = dataState, action) => {
   }
 };
 
-const fuselage_counter = (state = 50, action) => {
+const fuselage_counter = (state = 30, action) => {
   switch (action.type) {
     case 'ADD_Fuselage':
       return state + 1;
@@ -26,7 +26,7 @@ const fuselage_counter = (state = 50, action) => {
   }
 };
 
-const wing_counter = (state = 62, action) => {
+const wing_counter = (state = 30, action) => {
   switch (action.type) {
     case 'ADD_Wings':
       return state + 1;
@@ -42,7 +42,7 @@ const wing_counter = (state = 62, action) => {
   }
 };
 
-const empennage_counter = (state = 40, action) => {
+const empennage_counter = (state = 30, action) => {
   switch (action.type) {
     case 'ADD_Empennage':
       return state + 1;
@@ -58,7 +58,7 @@ const empennage_counter = (state = 40, action) => {
   }
 };
 
-const power_plant_counter = (state = 45, action) => {
+const power_plant_counter = (state = 30, action) => {
   switch (action.type) {
     case 'ADD_Power_Plant':
       return state + 1;

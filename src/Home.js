@@ -9,6 +9,8 @@ const e = 'total empennage count:';
 const f = 'total fuselage count:';
 const p = 'total power plant count:';
 const l = 'total landing gear count:';
+var url =
+  'https://reduxcounter-2968f-default-rtdb.firebaseio.com/lightjetinc/.json';
 
 export default function Home(value) {
   const dispatch = useDispatch();
@@ -28,9 +30,6 @@ export default function Home(value) {
 
   const getTotalComponents = () => {
     setIsFetching(true);
-
-    let url =
-      'https://reduxcounter-2968f-default-rtdb.firebaseio.com/lightjetinc/.json';
     axios
       .get(url)
       .then(res => res.data)
@@ -45,10 +44,11 @@ export default function Home(value) {
   };
 
   const onSubmit = (wing, empennage, fuselage, power, landing) => {
-    let url =
-      'https://reduxcounter-2968f-default-rtdb.firebaseio.com/lightjetinc/.json';
-    axios.put(url, wing, empennage, fuselage, power, landing).then(response => {
-      console.log(response);
+    axios.put(url, wing, empennage, fuselage, power, landing).then(data => {
+      dispatch({
+        type: 'TOTAL_COMPONENTS',
+        data,
+      });
     });
   };
 
@@ -75,7 +75,9 @@ export default function Home(value) {
             }
             currentComponent={l}
             currentNumberOfComponents={
-              cloneTotal.landing ? landing_gear_counter : cloneTotal.landing
+              landing_gear_counter === 30 || null
+                ? cloneTotal.landing
+                : landing_gear_counter
             }
             addText="add"
             minusText="minus"
@@ -97,7 +99,7 @@ export default function Home(value) {
             }
             currentComponent={w}
             currentNumberOfComponents={
-              cloneTotal.wing ? wing_counter : cloneTotal.wing
+              wing_counter === 30 || null ? cloneTotal.wing : wing_counter
             }
             addText="add"
             minusText="minus"
@@ -119,7 +121,9 @@ export default function Home(value) {
             }
             currentComponent={p}
             currentNumberOfComponents={
-              cloneTotal.power ? power_plant_counter : cloneTotal.power
+              power_plant_counter === 30 || null
+                ? cloneTotal.power
+                : power_plant_counter
             }
             addText="add"
             minusText="minus"
@@ -141,7 +145,9 @@ export default function Home(value) {
             }
             currentComponent={e}
             currentNumberOfComponents={
-              cloneTotal.empennage ? empennage_counter : cloneTotal.empennage
+              empennage_counter === 30 || null
+                ? cloneTotal.empennage
+                : empennage_counter
             }
             addText="add"
             minusText="minus"
@@ -163,7 +169,9 @@ export default function Home(value) {
             }
             currentComponent={f}
             currentNumberOfComponents={
-              cloneTotal.fuselage ? fuselage_counter : cloneTotal.fuselage
+              fuselage_counter === 30 || null
+                ? cloneTotal.fuselage
+                : fuselage_counter
             }
             addText="add"
             minusText="minus"
