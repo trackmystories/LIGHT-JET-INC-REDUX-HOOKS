@@ -34,11 +34,11 @@ npx react-native start
 
 <img src="./assets/image.png" width="350" alt="./assets/image.png">
 
-1. **Each counters initial state is set to 30 and consists of a button to increase or decrease the amount, a text showcasing the current amount and a button to decrease the amount.**
+1. **Each counters initial state is set to 30 and consists of a button to increase or decrease the amount, an integer showcasing the current amount and action buttons to increase or decrease the amount.**
 
-2. **When the user pressed add or minus the changes take place in real time on the firebase console**
+2. **When the user presses add or minus the changes take place in real time on the firebase console**
 
-3. **When the user submits the app sends a PUT request with the state of the counters preserving it inside of the firebase realtime database**
+3. **When the user submits the app sends a PUT request with the state of the counters, preserving it inside of the firebase realtime database**
 
 4. **The app then loads the updated state back onto the view of the app.**
 

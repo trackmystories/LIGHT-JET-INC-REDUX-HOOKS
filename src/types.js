@@ -10,5 +10,5 @@ export type ComponentProps = {
   add: any,
   minus: any,
   currentComponent: string,
-  currentNumberOfComponents: any,
+  currentNumberOfComponents: number | any,
 };
